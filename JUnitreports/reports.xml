@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.365" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Check the Greeting Service with Default Name" name="Retrieve a Greeting with Default Name" time="0.043">
+<system-out><![CDATA[
+Given the REST service is up and running....................................passed
+When I send a GET request for greeting name.................................passed
+And the response should contain a greeting message with the default name....passed
+Then the response status code should be 200.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the Greeting Service with a Custom Name" name="Retrieve a Greeting with a Custom Name" time="0.002">
+<system-out><![CDATA[
+Given the REST service is up and running for custom name....................passed
+When I send a GET request for greeting name is john.........................passed
+And the response should contain a greeting message with the name "John".....passed
+Then the response status code should be 200 for custom name.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the Greeting Service with a Empty Name" name="Retrieve a Greeting with an Empty Name" time="0.003">
+<system-out><![CDATA[
+Given the REST service is up and running for empty name.....................passed
+When I send a GET request for greeting name is blank........................passed
+And the response should contain a greeting message with the empty name......passed
+Then the response status code should be 200 for empty name..................passed
+]]></system-out>
+</testcase>
+</testsuite>
